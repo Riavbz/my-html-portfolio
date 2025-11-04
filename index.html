@@ -4,6 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <p id="textToCopy">This is the text that will be copied to the clipboard.</p>
+<button onclick="copyText()">Copy Text</button>
+
+<script>
+  function copyText() {
+    // Get the text to copy
+    const textElement = document.getElementById("textToCopy");
+    const text = textElement.innerText;
+
+    // Copy the text to the clipboard
+    navigator.clipboard.writeText(text)
+      .then(() => {
+        alert("Text copied to clipboard!"); // Optional: Provide user feedback
+      })
+      .catch(err => {
+        console.error("Failed to copy text: ", err); // Handle potential errors
+      });
+  }
+</script>
+
 </head>
 <body>
     
