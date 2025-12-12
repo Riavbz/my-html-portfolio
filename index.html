@@ -3,30 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <p id="textToCopy">This is the text that will be copied to the clipboard.</p>
-<button onclick="copyText()">Copy Text</button>
-
-<script>
-  function copyText() {
-    // Get the text to copy
-    const textElement = document.getElementById("textToCopy");
-    const text = textElement.innerText;
-
-    // Copy the text to the clipboard
-    navigator.clipboard.writeText(text)
-      .then(() => {
-        alert("Text copied to clipboard!"); // Optional: Provide user feedback
-      })
-      .catch(err => {
-        console.error("Failed to copy text: ", err); // Handle potential errors
-      });
-  }
-</script>
-
+    <title>Azaria's Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Clicker+Script&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
 </head>
+
 <body>
-    
-</body>
+<!-- Navigation Bar -->
+<nav>
+        <div class="topNav">
+            <a href="#" class="logo">Azaria's Portfolio</a>
+            <div class="nav-links"> 
+                <a href="#home">Home</a>
+                <a href="#aboutMe">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+<!-- Home Section -->
+ <div id="home" class="home-section">
+  <div class="hero-text">
+    <h1>Hello, I'm <span>Azaria Francis</span></h1>
+    <p>Software Developer | NPower Student</p>
+    <a href="#projects" class="btn btn-left">View My Work</a>
+  </div>
+  <div class="home-image">
+  <img src="Azaria-image.png" alt="Picture of website author">
+  </div>
+</div>
+<!-- About Me -->
+<section id="about" class="about">
+        <div class="container">
+            <h1 class="headings shift">About Me</h1>
+            <div class="about-content">
+                <img src="aboutAzaria.jpeg" alt="Profile Image">
+                <div class="text">
+                    <p>Hi, I'm Azaria Francis - a Computer Science graduate with a passion for problem-solving and building technology that makes life easier. I enjoy working with different technologies, building projects, and I love learning how different tools fit together to create real solutions. I'm currently expanding skills through hands-on projects while exploring roles in software development and tech innovation.</p>
+                    <div class="skills">
+                        <span>HTML/CSS</span>
+                        <span>Java</span>
+                        <span>JavaScript</span>
+                        <span>Python</span>
+                        <span>React</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- My Projects Section -->
+<section id="projects" class="projects">
+        <div class="container">
+            <h1 class="headings">My Projects</h1>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="snakeGame.png" alt="Snake Game Image">
+                    <h3>Snake Game</h3>
+                    <p>The classic snake game made using Java.</p>
+                    <a href="https://github.com/Riavbz/SnakeGame" class="btn btn-card">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="hangman.png" alt="Hangman Game Image">
+                    <h3>Hangman Game</h3>
+                    <p>The classic hangman game built using Java.</p>
+                    <a href="https://github.com/Riavbz/Hangman-Game" class="btn btn-card">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="collegeTipsApp.png" alt="Image of Tips for surviving college">
+                    <h3>Hangman Game</h3>
+                    <p>The classic hangman game built using Java.</p>
+                    <a href="https://github.com/Riavbz" class="btn btn-card">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Contact Form -->
+<section id="contact" class="contact">
+        <div class="container">
+            <h1 class="headings">Contact Me</h1>
+            <form>
+                <input type="text" placeholder="Your Name:" required="">
+                <input type="email" placeholder="Your Email:" required="">
+                <textarea placeholder="Your Message:" required=""></textarea>
+                <button type="submit" class="btn btn-submit">Email Me</button>
+            </form>
+        </div>
+    </section>
+<!-- Footer -->
+<footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Riavbz"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/azaria-francis-9726a61ba/"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <p>© 2025 Azaria's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+  </body>
 </html>
